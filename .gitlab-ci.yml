@@ -28,6 +28,15 @@ basic_gcc:
   - ./config --strict-warnings
   - make -s -j4
   - make test
+
+
+basic_clang:
+  image: teeks99/clang-ubuntu
+  stage: build
+  script:
+  - CC=clang ./config --strict-warnings
+  - make -s -j4
+  - make test
   
 minimal:
   stage: build
