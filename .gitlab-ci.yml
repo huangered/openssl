@@ -34,7 +34,7 @@ basic_clang:
   image: teeks99/clang-ubuntu
   stage: build
   script:
-  - CC=clang ./config --strict-warnings
+  - CC=clang-11 ./config --strict-warnings
   - make -s -j4
   - make test
   
